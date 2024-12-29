@@ -20,10 +20,10 @@ const Navbar = () => {
         
         {/* Icons for Desktop */}
         <div className="hidden md:flex items-center justify-between w-full">
-          <FiSearch size={20} className="hover:text-blue-500 cursor-pointer" />
+         
           <h3 className="text-2xl text-black font-bold text-center flex-1">Blog Spot</h3>
           <div className="flex items-center space-x-4">
-            <FiShoppingCart size={20} className="hover:text-blue-500 cursor-pointer" />
+          <FiSearch size={24} className="hover:text-blue-500 cursor-pointer" />
             <div className="border border-black rounded-full p-1">
               <FiUser size={20} className="hover:text-blue-500 cursor-pointer" />
             </div>

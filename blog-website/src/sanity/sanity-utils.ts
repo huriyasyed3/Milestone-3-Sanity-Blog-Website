@@ -2,7 +2,7 @@ import ImageUrlBuilder from "@sanity/image-url";
 import { createClient, type QueryParams } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { postQuery, postQueryBySlug } from "./sanity-query";
-import { Blog } from "@/types/blog";
+import { Blog } from "../../types/blog";
 
 export const client = createClient(clientConfig);
 export function imageBuilder(source: string) {
