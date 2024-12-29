@@ -1,11 +1,11 @@
 import { ClientPerspective } from "next-sanity";
 
 const config = {
-    projectId:"8ss2f04s",
+    projectId:"3odqw16b",
     dataset:"production",
     apiVersion:"2024-12-25",
     useCdn :false,
-   token :"ski72Q2fn71lSDDTIUU4QhuJ1ymxbHESYgG1DgHwkAAJ0spMGbDKVjE8OCNfu2xL1XltM4Wns7bn0rPpOr3vKy56J0b9UmEWSgNNuaMtanMvXROozHYzizf1reGZ10SnDkVDEwJAcMLXAdAq3vVhovMPtGzQT2mvHpYlBT3953V0NfXF8yZI",
+   token :"sko6ER7BRG08Cx5sRSbB4DQPWgRB36AB34R2PNa02xvQ9cU9DWVEcNvqRT9yjlqNR6eifTVqkUK3iUmdKlQg5b31NKUL7i7ufTE56GHXjbzieEmoD5T6PeHLRc31NKd0Kj8m1YYq1TLH3GrKFMRuVVEprmJPBDVRG9nzIwpY0rzApWYEcxau",
    perspective: 'published' as ClientPerspective,
 }
 export default config;
