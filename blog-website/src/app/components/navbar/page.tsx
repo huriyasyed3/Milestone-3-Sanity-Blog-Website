@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiSearch, FiShoppingCart, FiUser, FiMenu } from 'react-icons/fi'
+import { FiSearch, FiUser, FiMenu } from 'react-icons/fi'
 import Link from 'next/link'
 import {
   Sheet,
@@ -7,7 +7,7 @@ import {
   SheetTrigger,
   SheetHeader,
   SheetTitle,
-} from '@/components/ui/sheet'
+} from '../../components/ui/sheet'
 
 const Navbar = () => {
   return (
@@ -16,12 +16,16 @@ const Navbar = () => {
       {/* Header Section */}
       <div className="bg-white border-b-2 border-gray-300 px-6 py-2 flex items-center justify-between">
         {/* Heading for Mobile */}
-        <h3 className="text-xl font-bold text-black md:hidden">Blog Spot</h3>
+        <p className='text-xl font-bold md:hidden text-gray-800  '>
+        <span className='text-blue-600'>Blog</span>Spot
+                    </p>
         
         {/* Icons for Desktop */}
         <div className="hidden md:flex items-center justify-between w-full">
          
-          <h3 className="text-2xl text-black font-bold text-center flex-1">Blog Spot</h3>
+           <h3 className="text-3xl text-black font-bold text-center flex-1">
+           <span className='text-blue-600'>Blog</span>Spot
+            </h3> 
           <div className="flex items-center space-x-4">
           <FiSearch size={24} className="hover:text-blue-500 cursor-pointer" />
             <div className="border border-black rounded-full p-1">
@@ -45,21 +49,19 @@ const Navbar = () => {
                 <Link href="/" className="text-gray-700 hover:text-black">
                   Home
                 </Link>
-                <Link href="/" className="text-gray-700 hover:text-black">
+                <Link href={`/components/about`} className="text-gray-700 hover:text-black">
                   About Us
                 </Link>
                 <Link href="/" className="text-gray-700 hover:text-black">
                   Blog
                 </Link>
-                <Link href="/" className="text-gray-700 hover:text-black">
+                <Link href={`/components/categories`} className="text-gray-700 hover:text-black">
                   Categories
                 </Link>
-                <Link href="/" className="text-gray-700 hover:text-black">
+                <Link href="/user" className="text-gray-700 hover:text-black">
                   Contact Us
                 </Link>
-                <Link href="/" className="text-gray-700 hover:text-black">
-                  Login
-                </Link>
+               
               </div>
             </SheetContent>
           </Sheet>
@@ -72,21 +74,19 @@ const Navbar = () => {
           <Link href="/" className=" text-gray-500 hover:text-black text-md">
            Home
           </Link>
-          <Link href="/" className="text-gray-500 hover:text-black text-md">
+          <Link href={`/components/about`} className="text-gray-500 hover:text-black text-md">
             About Us
           </Link>
           <Link href="/" className="text-gray-500 hover:text-black text-md">
            Blog
           </Link>
-          <Link href="/" className="text-gray-500 hover:text-black text-md">
+          <Link href={`/components/categories`} className="text-gray-500 hover:text-black text-md">
             Categories
           </Link>
-          <Link href="/" className="text-gray-500 hover:text-black text-md">
+          <Link href="/user" className="text-gray-500 hover:text-black text-md">
             Contact Us
           </Link>
-          <Link href="/" className="text-gray-500 hover:text-black text-md">
-           Login
-          </Link>
+          
           
         </div>
       </nav>

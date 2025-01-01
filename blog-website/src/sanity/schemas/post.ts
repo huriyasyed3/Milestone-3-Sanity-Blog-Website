@@ -82,8 +82,8 @@ const post = {
         validation: (Rule: any) => Rule.required(),
       },
       {
-        name: "mainImage",
-        title: "Main image",
+        name: "Image",
+        title: "Image",
         type: "image",
         options: {
           hotspot: true,

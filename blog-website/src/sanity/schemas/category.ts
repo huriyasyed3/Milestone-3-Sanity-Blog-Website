@@ -29,8 +29,17 @@ const category = {
 				}),
 		},
 		{
-			name: "ogImage",
-			title: "Open Graph Image",
+			name: 'slug',
+			title: 'Slug',
+			type: 'slug',
+			options: {
+			  source: 'title',
+			  maxLength: 96,
+			},
+		  },
+		{
+			name: "image",
+			title: "Image",
 			type: "image",
 			options: {
 				hotspot: true,
@@ -47,5 +56,7 @@ const category = {
 			type: "text",
 		},
 	],
+	
+	
 };
 export default category;
