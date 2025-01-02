@@ -4,7 +4,8 @@ import React from 'react'
 
 const BlogItem = ({blog}: {blog: Blog}) => {
   return (
-    <Link href={`/blog/${blog.slug.current}`} className='block p-5 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 my-8'>
+    <Link href={`/blog/${blog.slug.current}`}
+     className='block p-5 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 my-8'>
       
       <article>
         <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-700">{blog.title}</h3>

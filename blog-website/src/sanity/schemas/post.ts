@@ -82,7 +82,7 @@ const post = {
         validation: (Rule: any) => Rule.required(),
       },
       {
-        name: "Image",
+        name: "image",
         title: "Image",
         type: "image",
         options: {
@@ -108,7 +108,7 @@ const post = {
       select: {
         title: "title",
         author: "author.name",
-        media: "mainImage",
+        media: "Image",
       },
       prepare(selection: any) {
         const { author } = selection;

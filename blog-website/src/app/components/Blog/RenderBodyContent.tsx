@@ -1,5 +1,5 @@
 import config from "@/sanity/config/client-config";
-import { Blog } from "../../../../types/blog";
+import { Blog } from '@/types/blog'
 import { PortableText } from "@portabletext/react";
 import { getImageDimensions } from "@sanity/asset-utils";
 import urlBuilder from "@sanity/image-url";
@@ -9,7 +9,7 @@ import Image from "next/image";
 const ImageComponent = ({ value, isInline }: any) => {
   const { width, height } = getImageDimensions(value);
   return (
-    <div className="my-10 overflow-hidden rounded-[15px]">
+    <div className="my-10  rounded-[15px]">
       <Image
         src={
           urlBuilder(config)

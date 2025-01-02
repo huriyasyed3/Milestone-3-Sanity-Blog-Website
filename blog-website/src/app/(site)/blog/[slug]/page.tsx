@@ -1,26 +1,29 @@
+import Image from "next/image";
 import React from "react";
 import { getPostBySlug } from "@/sanity/sanity-utils";
 import RenderBodyContent from "@/app/components/Blog/RenderBodyContent";
-
 import { urlFor } from "@/sanity/lib/image";
+
 
 const SingleBlogPage = async ({ params }: { params: any }) => {
   const post = await getPostBySlug(params.slug) as any
-  
-  return (
-    <article className="my-10">
+       
+          return ( 
+     
+  <article className="my-10 md:ml-20 ml-4 mr-2 md:mr-20">
       <div className="mb-5">
-        <h1 className="text-3xl py-2">{post.title}</h1>
-        {post.mainImage && (
-        <img
-          src={urlFor(post.mainImage).width(800).url()}
+        <h1 className="text-3xl  font-extrabold text-gray-800 leading-tight py-4  ">{post.title}</h1>
+        {post.image && (
+        <Image
+          src={urlFor(post.image).width(800).url()}
           alt={post.title}
+        
         />
       )}
-        <p className="pb-1">
+        <p className="pb-1 ">
           <span className="font-medium">Published:</span>
           {new Date(post.publishedAt).toDateString()}
-          <span className="font-medium pl-2">by </span>
+          <span className=" pl-2 font-medium">by </span>
           {post.author.name}
         </p>
 
@@ -31,7 +34,16 @@ const SingleBlogPage = async ({ params }: { params: any }) => {
         <RenderBodyContent post={post} />
       </article>
     </article>
-  );
-};
+
+
+          )
+} 
+
+
 
 export default SingleBlogPage;
+
+
+
+
+
