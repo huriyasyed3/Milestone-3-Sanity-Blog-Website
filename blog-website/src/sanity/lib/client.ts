@@ -31,12 +31,13 @@ export const fetchCategories = async () => {
   
 };
 
+
 // Fetch posts by category slug
 export const fetchPostsByCategory = async (slug: string) => {
   const query = `
     *[_type == "post" && $slug in categories[]->slug.current]{
       title,
-      mainImage,
+      image,
       body,
       "author": author->name,
       metadata

@@ -17,7 +17,7 @@ export type Blog = {
   slug: any,
   metadata: string,
   body: PortableTextBlock[],
-  mainImage: any,
+  image: any,
   author: Author,
   tags: string[],
   publishedAt: string,

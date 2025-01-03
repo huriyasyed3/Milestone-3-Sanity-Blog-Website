@@ -13,13 +13,15 @@ const SingleBlogPage = async ({ params }: { params: any }) => {
   <article className="my-10 md:ml-20 ml-4 mr-2 md:mr-20">
       <div className="mb-5">
         <h1 className="text-3xl  font-extrabold text-gray-800 leading-tight py-4  ">{post.title}</h1>
-        {post.image && (
+         {post.image && (
         <Image
-          src={urlFor(post.image).width(800).url()}
+          src={urlFor(post.image).width(1000).height(400).url()}
           alt={post.title}
-        
+          width={1000}
+          height={400}
+          className="object-cover"
         />
-      )}
+       )}   
         <p className="pb-1 ">
           <span className="font-medium">Published:</span>
           {new Date(post.publishedAt).toDateString()}
