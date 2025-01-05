@@ -19,10 +19,10 @@ const SingleBlogPage = async ({ params }: { params: any }) => {
           alt={post.title}
           width={1000}
           height={400}
-          className="object-cover"
+          className="object-cover mx-auto "
         />
        )}   
-        <p className="pb-1 ">
+        <p className="pb-1">
           <span className="font-medium">Published:</span>
           {new Date(post.publishedAt).toDateString()}
           <span className=" pl-2 font-medium">by </span>

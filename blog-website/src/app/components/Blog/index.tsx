@@ -4,43 +4,48 @@ import React from 'react';
 import Image from 'next/image';
 import { urlFor } from "@/sanity/lib/image";
 import { getPostBySlug } from "@/sanity/sanity-utils";
-
+import { Button } from '../ui/button';
 const BlogItem = async ({ blog }: { blog: any }) => {
   const post = await getPostBySlug(blog.slug) as any;
 
   
 
   return (
+    <>
+   <div className='p-4 h-full flex flex-col justify-between' >
     <Link
       href={`/blog/${blog.slug.current}`}
-      className="block p-5 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 my-8"
+      // className="block p-5 bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 my-8"
+      className='block'
     >
-      <article>
-        {/* Check if post.image exists */}
-        {post?.image ? (
-          <Image
-            src={urlFor(post.image).width(700).height(500).url()} // Generates the image URL
-            alt={post?.title || "Blog Image"}
-            width={700}
-            height={500}
-            className=" object-cover "
+        <div className="h-[200px] w-full relative">
+           <Image
+            src={urlFor(blog.image).width(300).height(200).url()} // Generates the image URL
+            alt={blog.title}
+            layout='fill'
+            className=" object-cover rounded-md "
           />
-        ) : (
-          <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-            <p className="text-gray-500">No Image Available</p>
           </div>
-        )}
-        <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-700">
+        
+        
+        <h3 className="mt-4 mb-2 text-lg font-semibold text-gray-800 truncate">
           {blog.title}
         </h3>
-        <p className="mb-3 font-normal text-sm text-gray-600">
+       
+        <p className="text-sm text-gray-600 mb-2">
           {new Date(blog.publishedAt).toDateString()}
         </p>
-        <p className="mb-3 font-normal text-gray-600">
+        
+        <p className="text-sm text-gray-600 line-clamp-3">
           {blog.metadata.slice(0, 140)}...
         </p>
-      </article>
-    </Link>
+
+       <Link href={`/blog/${blog.slug.current}`}>
+       <Button className='bg-blue-500 hover:bg-blue-400 text-white w-full mt-4 '>Read More</Button></Link> 
+     
+      </Link>
+      </div>
+    </>
   );
 };
 
